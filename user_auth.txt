@@ -1,0 +1,14 @@
+FUNCTION is_employee_user RETURN BOOLEAN IS
+  l_username VARCHAR2(255) := v('APP_USER');
+  l_role VARCHAR2(50);
+BEGIN
+  SELECT role
+  INTO l_role
+  FROM user_account
+  WHERE username = l_username;
+
+  RETURN l_role = 'Employee';
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    RETURN FALSE;
+END is_employee_user;
