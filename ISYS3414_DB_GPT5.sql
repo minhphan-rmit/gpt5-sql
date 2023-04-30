@@ -106,7 +106,7 @@ CREATE TABLE tax_bracket (
 
 -- Database Populate
 
--- User Account table popluate
+-- User Account table popluation
 INSERT INTO user_account (UserID, Username, UserPassword, Email, Phone, DateOfBirth, FirstName, LastName, Gender, Role, Status) 
 VALUES (1, 'gpt5master', 'master123', 'gpt5@master.com', '1234567890', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'Giang', 'Tuan', 'Male', 'Master', 'Active');
 
@@ -238,3 +238,303 @@ VALUES (43, 'thanhngoc', 'nttn1234', 's39797640@rmit.edu.vn', '0922222222', TO_D
 
 INSERT INTO user_account (UserID, Username, UserPassword, Email, Phone, DateOfBirth, FirstName, LastName, Gender, Role, Status)
 VALUES (44, 'dangkhoi', 'bdk1234', 's3983426@rmit.edu.vn', '09555555555', TO_DATE('2004-03-03', 'YYYY-MM-DD'), 'Khoi', 'Bui', 'Male', 'Manager', 'Active');
+
+-- Company table populatation
+-- Company 1
+INSERT INTO company (CompanyID, CompanyName, CompanyAddress, Country)
+VALUES(
+        1,
+        'RMIT University',
+        '124 La Trobe St, Melbourne VIC 3000, Australia',
+        'Australia'
+    );
+
+-- Company 2
+INSERT INTO company (CompanyID, CompanyName, CompanyAddress, Country)
+VALUES (
+        2,
+        'GPT-5',
+        '702 Nguyen Van Linh Street, District 7, Ho Chi Minh City, Vietnam',
+        'Vietnam'
+    );
+
+
+-- Department table population
+-- Departments in Company 1
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (1, 1, 10000.00, 'Administration');
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (2, 1, 9000.00, 'Teaching');
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (3, 1, 8000.00, 'IT Support');
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (4, 1, 7000.00, 'Marketing');
+
+-- Departments in Company 2
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (6, 2, 100000000.00, 'Technical');
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (7, 2, 90000000.00, 'Business');
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (8, 2, 70000000.00, 'Human Resource');
+INSERT INTO department (DepartmentID, CompanyID, Budget, DepartmentName)
+VALUES (9, 2, 60000000.00, 'Marketing');
+
+
+-- Employee Population
+-- Employees in Company 1
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (2, 2, 3, 'IT Leader', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (3, 3, 5, 'Technical Support Specialist', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (4, 4, 1, 'President', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (5, 5, 2, 'Course Coordinator', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (6, 6, 3, 'Senior Supporter', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (7, 7, 4, 'Marketing Director', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (8, 8, 1, 'Vice President', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (9, 9, 1, 'Assistant', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (10, 10, 1, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (11, 11, 1, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (12, 12, 2, 'Lecturer', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (13, 13, 2, 'Teaching Assistant', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (14, 14, 2, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (15, 15, 2, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (16, 16, 3, 'Junior Supporter', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (17, 17, 3, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (18, 18, 3, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (19, 19, 4, 'Content Specialist', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (20, 20, 4, 'Event Coordinator', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (21, 21, 4, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (22, 22, 4, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 1);
+
+-- Employees in Company 2
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (23, 23, 5, 'Software Engineer', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (24, 24, 5, 'Network Administrator', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (25, 25, 5, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (26, 26, 6, 'Financial Analyst', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (27, 27, 6, 'Operations Manager', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (28, 28, 6, 'Marketing Analyst', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (29, 29, 6, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (30, 30, 7, 'Recruiter', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (31, 31, 7, 'Training and Development Manager', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (32, 32, 7, 'HR Generalist', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (33, 33, 7, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (34, 34, 8, 'Event Coordinator', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (35, 35, 8, 'Brand Manager', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (36, 36, 8, 'Content Creator', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (37, 37, 8, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (38, 38, 7, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (39, 39, 6, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (40, 40, 5, 'Staff', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (41, 41, 8, 'Marketing Manager', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (42, 42, 5, 'Chief Technical Officer', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (43, 43, 6, 'Business Manager', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO employee (EmployeeID, UserID, DepartmentID, Designation, HireDate, CompanyID)
+VALUES (44, 44, 7, 'HR Director', TO_DATE('2015-01-01', 'YYYY-MM-DD'), 2);
+
+-- Designation Salary Population
+-- Company 1 Designation Salary
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (1, 1, 'President', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (2, 1, 'Vice President', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (3, 1, 'Assistant', 4000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (4, 1, 'Staff', 30000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (5, 2, 'Course Coordinator', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (6, 2, 'Lecturer', 8500.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (7, 2, 'Teaching Assistant', 6000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (8, 2, 'Staff', 3000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (9, 3, 'IT Leader', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (10, 3, 'Senior Supporter', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (11, 3, 'Junior Supporter', 6000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (12, 3, 'Staff', 4000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (13, 4, 'Marketing Director', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (14, 4, 'Content Specialist', 7500.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (15, 4, 'Event Coordinatior', 7650.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (16, 4, 'Staff', 3000.00);
+
+-- Company 2 Designation Salary
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (17, 5, 'Chief Tech Officer', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (18, 5, 'Software Engineer', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (19, 5, 'Network Administration', 7500.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (20, 5, 'Technical Support Specialist', 7000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (21, 5, 'Staff', 4000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (22, 6, 'Business Manager', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (23, 6, 'Financial Analyst', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (24, 6, 'Operations Manager', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (25, 6, 'Marketing Analyst', 7500.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (26, 6, 'Staff', 4000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (27, 7, 'HR Director', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (28, 7, 'Recruiter', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (29, 7, 'Training and Development Manager', 7500.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (30, 7, 'HR Generalist', 7000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (31, 7, 'Staff', 4000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (32, 8, 'Marketing Manager', 10000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (33, 8, 'Event Coordinator', 8000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (34, 8, 'Brand Manager', 7500.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (35, 8, 'Content Creator', 7000.00);
+
+INSERT INTO designation_salary (DesignationSalaryID, DepartmentID, Designation, BaseSalary)
+VALUES (36, 8, 'Staff', 4000.00);
+
+-- Tax Bracket population
+-- Company 1 Tax Bracket
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (1, 1, 0, 3000, 0);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (2, 1, 3000, 4500, 5);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (3, 1, 4501, 7000, 7);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (4, 1, 7001, 9000, 9);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (5, 1, 9001, 9999999999, 15);
+
+-- Company 2 Tax Bracket
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (6, 2, 0, 3000, 0);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (7, 2, 3000, 4500, 5);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (8, 2, 4501, 7000, 7);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (9, 2, 7001, 9000, 9);
+INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (10, 2, 9001, 9999999999, 15);
