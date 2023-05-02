@@ -104,7 +104,7 @@ CREATE TABLE tax_bracket (
 );
 
 
--- Database Populate
+-- Database Population
 
 -- User Account table popluation
 INSERT INTO user_account (UserID, Username, UserPassword, Email, Phone, DateOfBirth, FirstName, LastName, Gender, Role, Status) 
@@ -538,3 +538,222 @@ INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE)
 INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (8, 2, 4501, 7000, 7);
 INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (9, 2, 7001, 9000, 9);
 INSERT INTO TAX_BRACKET (TAXBRACKETID, COMPANYID, MININCOME, MAXINCOME, TAXRATE) VALUES (10, 2, 9001, 9999999999, 15);
+
+
+-- Salary Adjustment Population
+-- Increment for employee ID 2
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason) 
+VALUES (1, 2, TO_DATE('2023-01-01', 'YYYY-MM-DD'), 650, 'Increment', 'Annual Increment');
+
+-- Deduction for employee ID 3
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason) 
+VALUES (2, 3, TO_DATE('2023-01-01', 'YYYY-MM-DD'), 300, 'Deduction', 'Late Penalty');
+
+-- Increment for employee ID 4
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason) 
+VALUES (3, 4, TO_DATE('2023-01-01', 'YYYY-MM-DD'), 750, 'Increment', 'Performance Bonus');
+
+-- Deduction for employee ID 5
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason) 
+VALUES (4, 5, TO_DATE('2023-01-01', 'YYYY-MM-DD'), 200, 'Deduction', 'Absenteeism');
+
+-- Increment for employee ID 6
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason) 
+VALUES (5, 6, TO_DATE('2023-01-01', 'YYYY-MM-DD'), 600, 'Increment', 'Cost of Living Adjustment');
+
+-- Increment for employee ID 7
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (6, 7, TO_DATE('2023-02-01', 'YYYY-MM-DD'), 500, 'Increment', 'Merit Increase');
+
+-- Deduction for employee ID 8
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (7, 8, TO_DATE('2023-02-01', 'YYYY-MM-DD'), 100, 'Deduction', 'Equipment Damage');
+
+-- Increment for employee ID 9
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (8, 9, TO_DATE('2023-03-01', 'YYYY-MM-DD'), 800, 'Increment', 'Promotion');
+
+-- Deduction for employee ID 10
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (9, 10, TO_DATE('2023-03-01', 'YYYY-MM-DD'), 150, 'Deduction', 'Health Insurance');
+
+-- Increment for employee ID 11
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (10, 11, TO_DATE('2023-04-01', 'YYYY-MM-DD'), 900, 'Increment', 'Market Adjustment');
+
+-- Deduction for employee ID 12
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (11, 12, TO_DATE('2023-04-01', 'YYYY-MM-DD'), 250, 'Deduction', 'Loan Repayment');
+
+-- Increment for employee ID 13
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (12, 13, TO_DATE('2023-05-01', 'YYYY-MM-DD'), 700, 'Increment', 'Skills Development Bonus');
+
+-- Deduction for employee ID 14
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (13, 14, TO_DATE('2023-05-01', 'YYYY-MM-DD'), 200, 'Deduction', 'Tax Withholding');
+
+-- Increment for employee ID 15
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (14, 15, TO_DATE('2023-06-01', 'YYYY-MM-DD'), 1000, 'Increment', 'Extraordinary Performance Award');
+
+-- Deduction for employee ID 16
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (15, 16, TO_DATE('2023-06-01', 'YYYY-MM-DD'), 300, 'Deduction', 'Salary Overpayment');
+
+-- Increment for employee ID 17
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (16, 17, TO_DATE('2023-07-01', 'YYYY-MM-DD'), 550, 'Increment', 'Retention Bonus');
+
+-- Deduction for employee ID 18
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (17, 18, TO_DATE('2023-07-01', 'YYYY-MM-DD'), 100, 'Deduction', 'Parking Violation');
+
+-- Increment for employee ID 19
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (18, 19, TO_DATE('2023-08-01', 'YYYY-MM-DD'), 850, 'Increment', 'Employee Referral Bonus');
+
+-- Deduction for employee ID 20
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (19, 20, TO_DATE('2023-08-01', 'YYYY-MM-DD'), 400, 'Deduction', 'Court-Ordered Garnishment');
+
+-- Increment for employee ID 21
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (20, 21, TO_DATE('2023-09-01', 'YYYY-MM-DD'), 700, 'Increment', 'Educational Assistance Reimbursement');
+
+-- Deduction for employee ID 22
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (21, 22, TO_DATE('2023-09-01', 'YYYY-MM-DD'), 150, 'Deduction', 'Child Support');
+
+-- Increment for employee ID 23
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (22, 23, TO_DATE('2023-10-01', 'YYYY-MM-DD'), 950, 'Increment', 'Departmental Award');
+
+-- Deduction for employee ID 24
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (23, 24, TO_DATE('2023-10-01', 'YYYY-MM-DD'), 200, 'Deduction', 'Expense Reimbursement Adjustment');
+
+-- Increment for employee ID 25
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (24, 25, TO_DATE('2023-11-01', 'YYYY-MM-DD'), 500, 'Increment', 'Job Re-Evaluation');
+
+-- Deduction for employee ID 26
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (25, 26, TO_DATE('2023-11-01', 'YYYY-MM-DD'), 250, 'Deduction', 'Unpaid Leave');
+
+-- Increment for employee ID 27
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (26, 27, TO_DATE('2023-12-01', 'YYYY-MM-DD'), 600, 'Increment', 'Longevity Pay');
+
+-- Deduction for employee ID 28
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (27, 28, TO_DATE('2023-12-01', 'YYYY-MM-DD'), 350, 'Deduction', 'Overpayment Correction');
+
+-- Increment for employee ID 29
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (28, 29, TO_DATE('2024-01-01', 'YYYY-MM-DD'), 800, 'Increment', 'Profit Sharing Bonus');
+
+-- Deduction for employee ID 30
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (29, 30, TO_DATE('2024-01-01', 'YYYY-MM-DD'), 100, 'Deduction', 'Uniform Deduction');
+
+-- Increment for employee ID 31
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (30, 31, TO_DATE('2024-02-01', 'YYYY-MM-DD'), 650, 'Increment', 'Loyalty Bonus');
+
+-- Deduction for employee ID 32
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (31, 32, TO_DATE('2024-02-01', 'YYYY-MM-DD'), 200, 'Deduction', 'Excessive Breaks Penalty');
+
+-- Increment for employee ID 33
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (32, 33, TO_DATE('2024-03-01', 'YYYY-MM-DD'), 750, 'Increment', 'Employee of the Month');
+
+-- Deduction for employee ID 34
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (33, 34, TO_DATE('2024-03-01', 'YYYY-MM-DD'), 300, 'Deduction', 'Non-Compliance Penalty');
+
+-- Increment for employee ID 35
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (34, 35, TO_DATE('2024-04-01', 'YYYY-MM-DD'), 550, 'Increment', 'Sales Commission');
+
+-- Deduction for employee ID 36
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (35, 36, TO_DATE('2024-04-01', 'YYYY-MM-DD'), 250, 'Deduction', 'Work-Related Travel Expenses');
+
+-- Increment for employee ID 37
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (36, 37, TO_DATE('2024-05-01', 'YYYY-MM-DD'), 700, 'Increment', 'New Certification Bonus');
+
+-- Deduction for employee ID 38
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (37, 38, TO_DATE('2024-05-01', 'YYYY-MM-DD'), 150, 'Deduction', 'Late Arrival Penalty');
+
+-- Increment for employee ID 39
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (38, 39, TO_DATE('2024-06-01', 'YYYY-MM-DD'), 900, 'Increment', 'Special Project Completion Bonus');
+
+-- Deduction for employee ID 40
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (39, 40, TO_DATE('2024-06-01', 'YYYY-MM-DD'), 200, 'Deduction', 'Personal Phone Usage');
+
+-- Increment for employee ID 41
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (40, 41, TO_DATE('2024-07-01', 'YYYY-MM-DD'), 800, 'Increment', 'Company Milestone Achievement');
+
+-- Deduction for employee ID 42
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (41, 42, TO_DATE('2024-07-01', 'YYYY-MM-DD'), 300, 'Deduction', 'Unauthorized Overtime');
+
+-- Increment for employee ID 43
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (42, 43, TO_DATE('2024-08-01', 'YYYY-MM-DD'), 750, 'Increment', 'Leadership Training Completion');
+
+-- Deduction for employee ID 44
+INSERT INTO salary_adjustment (AdjustmentID, EmployeeID, AdjustmentDate, AdjustmentAmount, AdjustmentType, Reason)
+VALUES (43, 44, TO_DATE('2024-08-01', 'YYYY-MM-DD'), 250, 'Deduction', 'Safety Violation');
+
+-- Salary Summary Population (Only for user 22)
+-- Record 1
+INSERT INTO SALARY_SUMMARY (SALARYSUMMARYID, EMPLOYEEID, PAYMENTDATE, BASESALARY, NETSALARY, TOTALSAVINGS, CTCSALARY, TAXDEDUCTION)
+VALUES (1, 22, TO_DATE('2022-01-31', 'YYYY-MM-DD'), 3000, 2850, 2850, 3000, 150);
+
+-- Record 2
+INSERT INTO SALARY_SUMMARY (SALARYSUMMARYID, EMPLOYEEID, PAYMENTDATE, BASESALARY, NETSALARY, TOTALSAVINGS, CTCSALARY, TAXDEDUCTION)
+VALUES (2, 22, TO_DATE('2022-02-28', 'YYYY-MM-DD'), 3200, 3040, 5890, 3200, 160);
+
+-- Record 3
+INSERT INTO SALARY_SUMMARY (SALARYSUMMARYID, EMPLOYEEID, PAYMENTDATE, BASESALARY, NETSALARY, TOTALSAVINGS, CTCSALARY, TAXDEDUCTION)
+VALUES (3, 22, TO_DATE('2022-03-31', 'YYYY-MM-DD'), 3500, 3325, 9215, 3500, 175);
+
+-- Record 4
+INSERT INTO SALARY_SUMMARY (SALARYSUMMARYID, EMPLOYEEID, PAYMENTDATE, BASESALARY, NETSALARY, TOTALSAVINGS, CTCSALARY, TAXDEDUCTION)
+VALUES (4, 22, TO_DATE('2022-04-30', 'YYYY-MM-DD'), 3800, 3610, 12825, 3800, 190);
+
+-- Record 5
+INSERT INTO SALARY_SUMMARY (SALARYSUMMARYID, EMPLOYEEID, PAYMENTDATE, BASESALARY, NETSALARY, TOTALSAVINGS, CTCSALARY, TAXDEDUCTION)
+VALUES (5, 22, TO_DATE('2022-05-31', 'YYYY-MM-DD'), 4000, 3800, 16625, 4000, 200);
+
+-- Record 6
+INSERT INTO SALARY_SUMMARY (SALARYSUMMARYID, EMPLOYEEID, PAYMENTDATE, BASESALARY, NETSALARY, TOTALSAVINGS, CTCSALARY, TAXDEDUCTION)
+VALUES (6, 22, TO_DATE('2022-06-30', 'YYYY-MM-DD'), 4200, 3990, 20615, 4200, 210);
+
+-- Salary Adjustment Population (Only for user 22)
+INSERT INTO SALARY_ADJUSTMENT (ADJUSTMENTID, EMPLOYEEID, ADJUSTMENTDATE, ADJUSTMENTAMOUNT, ADJUSTMENTTYPE, REASON)
+VALUES (44, 22, TO_DATE('2022-02-28', 'YYYY-MM-DD'), 160, 'Deduction', 'Tax Deduction');
+
+
+INSERT INTO SALARY_ADJUSTMENT (ADJUSTMENTID, EMPLOYEEID, ADJUSTMENTDATE, ADJUSTMENTAMOUNT, ADJUSTMENTTYPE, REASON)
+VALUES (45, 22, TO_DATE('2022-03-31', 'YYYY-MM-DD'), 175, 'Deduction', 'Tax Deduction');
+
+
+INSERT INTO SALARY_ADJUSTMENT (ADJUSTMENTID, EMPLOYEEID, ADJUSTMENTDATE, ADJUSTMENTAMOUNT, ADJUSTMENTTYPE, REASON)
+VALUES (46, 22, TO_DATE('2022-04-30', 'YYYY-MM-DD'), 190, 'Deduction', 'Tax Deduction');
+
+
+INSERT INTO SALARY_ADJUSTMENT (ADJUSTMENTID, EMPLOYEEID, ADJUSTMENTDATE, ADJUSTMENTAMOUNT, ADJUSTMENTTYPE, REASON)
+VALUES (47, 22, TO_DATE('2022-05-31', 'YYYY-MM-DD'), 200, 'Deduction', 'Tax Deduction');
+
+
+INSERT INTO SALARY_ADJUSTMENT (ADJUSTMENTID, EMPLOYEEID, ADJUSTMENTDATE, ADJUSTMENTAMOUNT, ADJUSTMENTTYPE, REASON)
+VALUES (48, 22, TO_DATE('2022-06-30', 'YYYY-MM-DD'), 210, 'Deduction', 'Tax Deduction');
