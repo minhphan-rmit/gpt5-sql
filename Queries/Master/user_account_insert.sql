@@ -1,0 +1,2 @@
+INSERT INTO user_account (UserID, Username, UserPassword, Email, Phone, DateOfBirth, FirstName, LastName, Gender, Role, Status)
+VALUES (<UserID>, '<Username>', '<UserPassword>', '<Email>', '<Phone>', TO_DATE('<DateOfBirth>', 'YYYY-MM-DD'), '<FirstName>', '<LastName>', '<Gender>', '<Role>', '<Status>');
